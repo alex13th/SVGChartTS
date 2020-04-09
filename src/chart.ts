@@ -140,7 +140,7 @@ function createRectLabel(x, y, width, height, title, style) {
 function drawVAxisLabels(x, y, options) {
     var vAxisLabelsG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-    for(i = 0; i < options.vGrid.dataLabels.labels.length; i++) {
+    for(let i = 0; i < options.vGrid.dataLabels.labels.length; i++) {
         var rectLabel = createRectLabel(
                 x + options.vGrid.step * i, 
                 y, 
@@ -159,7 +159,7 @@ function drawGrid(options) {
     
     var gridG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-    hGridG = drawHGrid(options);
+    let hGridG = drawHGrid(options);
     var gridLine = createLine(
         x,
         y + options.hGrid.step * options.hAxis.position, 
@@ -170,7 +170,7 @@ function drawGrid(options) {
     hGridG.appendChild(gridLine);
     gridG.appendChild(hGridG);
 
-    vGridG = drawVGrid(options); 
+    let vGridG = drawVGrid(options); 
     var gridLine = createLine(
         x + options.vGrid.step * options.vAxis.position,
         y, 
@@ -290,9 +290,9 @@ function drawChart(chartDiv, data, options) {
     
     applyZoom(zoom, options);
 
-    chartWidth = options.vGrid.step * options.vGrid.count 
+    let chartWidth = options.vGrid.step * options.vGrid.count 
             + options.leftPadding;
-    chartHeight = options.hGrid.step * (options.hGrid.count -1) 
+    let chartHeight = options.hGrid.step * (options.hGrid.count -1) 
             + options.topPadding + options.vGrid.dataLabels.style.height * 2;
 
     var chartSVG = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -315,7 +315,7 @@ function drawChart(chartDiv, data, options) {
     var graphPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     graphG.appendChild(graphPath);
 
-    strPath ='M';
+    let strPath ='M';
     for(let i = 0; i < data.length; i++) {
         let x = ((i + options.vAxis.position) * options.vGrid.step + options.leftPadding + options.vGrid.offset);
         let y = options.hAxis.position * options.hGrid.step 
@@ -343,3 +343,4 @@ function drawChart(chartDiv, data, options) {
     chartDiv.appendChild(chartSVG);
 }
 
+let s = new SVGRect();

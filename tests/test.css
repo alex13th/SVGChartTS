@@ -1,0 +1,11 @@
+.testScope {
+    margin-left: 16px;
+}
+
+.testScope span.passedTest {
+    color: green;
+}
+
+.testScope span.failedTest {
+    color: red;
+}

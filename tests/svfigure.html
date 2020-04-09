@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <script src="../scripts/svgfigures.js"></script>
+    <script src="../scripts/tests/svgtests.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="resultDiv"><br>
+    </div>
+    <script>
+        var elementTest = new Test_SVG_Element();
+        var str = elementTest.runTest();
+
+        var rectTest = new Test_SVG_Rect();
+        str += rectTest.runTest();
+        document.getElementById("resultDiv").innerHTML = str;
+    </script>
+</body>
+</html>
