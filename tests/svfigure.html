@@ -13,10 +13,10 @@
     </div>
     <script>
         var elementTest = new Test_SVG_Element();
-        var str = elementTest.runTest();
+        var str = elementTest.runAll();
 
         var rectTest = new Test_SVG_Rect();
-        str += rectTest.runTest();
+        str += rectTest.runAll();
         document.getElementById("resultDiv").innerHTML = str;
     </script>
 </body>

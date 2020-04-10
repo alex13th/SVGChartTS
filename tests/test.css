@@ -1,11 +1,16 @@
-.testScope {
+.testScopeResult {
+    margin: 8px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.testSingleResult {
     margin-left: 16px;
 }
 
-.testScope span.passedTest {
+span.passedTest {
     color: green;
 }
 
-.testScope span.failedTest {
+span.failedTest {
     color: red;
 }

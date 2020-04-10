@@ -6,6 +6,8 @@ interface SVG_Style {
     fontSize?: number;
     stroke?: string;
     strokeWidth?: number;
+    textAnchor?: string;
+    transform?: string;
 }
 
 class SVG_Element {
@@ -27,6 +29,8 @@ class SVG_Element {
             if (!isNaN(style.fontSize)) this._style.fontSize = style.fontSize;
             if (style.stroke) this._style.stroke = style.stroke;
             if (!isNaN(style.strokeWidth)) this._style.strokeWidth = style.strokeWidth;
+            if (style.textAnchor) this._style.textAnchor = style.textAnchor;
+            if (style.transform) this._style.transform = style.transform;
         }
     }
 }

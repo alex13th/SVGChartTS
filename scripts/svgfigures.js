@@ -39,6 +39,10 @@ var SVG_Element = /** @class */ (function () {
                     this._style.stroke = style.stroke;
                 if (!isNaN(style.strokeWidth))
                     this._style.strokeWidth = style.strokeWidth;
+                if (style.textAnchor)
+                    this._style.textAnchor = style.textAnchor;
+                if (style.transform)
+                    this._style.transform = style.transform;
             }
         },
         enumerable: true,
